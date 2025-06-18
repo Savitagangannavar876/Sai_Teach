@@ -21,11 +21,11 @@ public class PrCL {
 
 	    @BeforeMethod
 
-	    public void launchWeb() {
+	    public void launchWeb() throws InterruptedException {
 	        driver = new ChromeDriver();
 	        driver.get("https://opensource-demo.orangehrmlive.com/web/");
 	        driver.manage().window().maximize();
-
+  Thread.sleep(1000);
 	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	    }
 	
